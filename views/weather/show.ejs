@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Weather</title>
+    <style>
+      * {
+        background: aliceblue;
+      }
+
+      .currentWeather {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="currentWeather">
+      <h2>Current Weather in <%= city %></h2>
+      <p><%= weather %>&deg F & <%= sky %></p>
+      <a href="/">Back to Home!</a>
+    </div>
+  </body>
+</html>
