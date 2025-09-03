@@ -26,8 +26,6 @@ app.post("/weather", async (req, res) => {
   const apiKey = process.env.API_KEY;
   const weatherReq = await fetch(`https://api.openweathermap.org/data/2.5/weather?zip=${zip},us&units=imperial&appid=${apiKey}`);
   const weatherData = await weatherReq.json();
-  console.log(weatherData.main.temp);
-  console.log("sky:" + weatherData.weather[0].main)
   res.redirect(`/weather/show?weather=${weatherData.main.temp}&city=${weatherData.name}&sky=${weatherData.weather[0].main}`)
 })
 
